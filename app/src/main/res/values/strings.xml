@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">My App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="enter_your_">Enter Your\nPhone Number</string>
+    <string name="conti_nue">Continue</string>
+    <string name="enter_otp">Enter The\nOTP</string>
+    <string name="notes">Notes</string>
+    <string name="personal_messages_to_you">Personal messages to you</string>
+    <string name="avatar">avatar</string>
+    <string name="interested_in_you">Interested In You</string>
+    <string name="premium_members_can_view_all_their_likes_at_once">Premium members can view all their likes at once</string>
+    <string name="discover">Discover</string>
+    <string name="matches">Matches</string>
+    <string name="profile">Profile</string>
+    <string name="tap_to_view">Tap to review %1$d+ notes</string>
+</resources>

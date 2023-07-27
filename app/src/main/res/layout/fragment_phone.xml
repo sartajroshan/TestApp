@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login.PhoneFragment">
+
+    <TextView
+        android:id="@+id/get_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="@string/get_otp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/enter_your_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_extrabold"
+        android:text="@string/enter_your_"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/get_otp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#C4C4C4"
+        app:boxCornerRadiusBottomStart="@dimen/corner_8dp"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/corner_8dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_your_"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_code"
+            android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:inputType="phone"
+            android:padding="0dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="#C4C4C4"
+        app:boxCornerRadiusBottomStart="@dimen/corner_8dp"
+        app:boxCornerRadiusBottomEnd="@dimen/corner_8dp"
+        app:boxCornerRadiusTopEnd="@dimen/corner_8dp"
+        app:boxCornerRadiusTopStart="@dimen/corner_8dp"
+        app:layout_constraintStart_toEndOf="@id/layout_code"
+        app:layout_constraintTop_toBottomOf="@id/enter_your_"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:inputType="phone"
+            android:padding="0dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="#F9CB10"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/conti_nue"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_phone" />
+
+<ProgressBar
+    android:id="@+id/loader"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

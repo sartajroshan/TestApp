@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.notes.NotesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TextView
+            android:id="@+id/txt_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="@string/notes"
+            android:textSize="27sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/txt_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/personal_messages_to_you"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_notes" />
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_invite"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@id/txt_subtitle"
+
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/img_invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@tools:sample/avatars"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ImageView.Corner"
+                    android:contentDescription="@string/avatar" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/rectangle_35"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_invitor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_extrabold"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_invitor_desc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Meena, 23"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_invitor_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/inter_semibold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:text="@string/tap_to_view"
+                    app:layout_constraintBottom_toBottomOf="@id/img_invite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="Tap to review 50+ notes" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_upgrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintTop_toBottomOf="@id/card_invite"
+            >
+            <TextView
+                android:id="@+id/interested_in_you"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/interested_in_you"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:fontFamily="@font/inter_extrabold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:id="@+id/premium_members_can_view_all_their_likes_at_once"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#9B9B9B"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/premium_members_can_view_all_their_likes_at_once"
+                app:layout_constraintStart_toStartOf="@id/interested_in_you"
+                app:layout_constraintEnd_toEndOf="@id/interested_in_you"
+                app:layout_constraintTop_toBottomOf="@id/interested_in_you"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upgrade"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_extrabold"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/primary_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_likes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="16dp"
+            app:spanCount="2"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_upgrade"
+            tools:listitem="@layout/recyclerview_item_like"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

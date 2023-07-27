@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_discover"
+        android:icon="@drawable/home_tab"
+        android:title="@string/discover" />
+    <item
+        android:id="@+id/notes"
+        android:icon="@drawable/notes_tab"
+        android:title="@string/notes" />
+    <item
+        android:id="@+id/matches"
+        android:icon="@drawable/matches_tab"
+        android:title="@string/matches" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="@string/profile" />
+</menu>
